@@ -1,0 +1,1751 @@
+@charset "utf-8";
+
+/*	--------------------------------------------------
+	Font Setup
+	-------------------------------------------------- */
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoeui.woff') format('woff'),
+  	     url('../fonts/segoeui.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoeuib.woff') format('woff'),
+  	     url('../fonts/segoeuib.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoeuii.woff') format('woff'),
+  	     url('../fonts/segoeuii.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoeuil.woff') format('woff'),
+  	     url('../fonts/segoeuil.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/seguisb.woff') format('woff'),
+  	     url('../fonts/seguisb.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/*	--------------------------------------------------
+	Generic CSS Setup
+	-------------------------------------------------- */
+html {
+	width: 100%;
+	height: 100%;
+	background: #fcfcfc;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	padding: 0 0 0 0px;
+	margin: 0 0 0 0px;
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.533;
+	box-sizing: border-box;
+	color: #6d6e6e;
+}
+h1, h2, h3, h4, h5, td, tr, th, div, header, section, footer, p, form, input, textarea, select, fieldset{
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.533;
+	color: #6d6e6e;
+	margin: 0 0 0 0px;
+	padding: 0 0 0 0px;
+	border: none;
+}
+h1{
+	font-size: 30px;
+	color: #6d6e6e;
+	font-weight: 300;
+	line-height: 1.25;
+	letter-spacing: 1.5px;
+}
+h1 strong{
+	font-weight: 300;
+	color: #7d968f;
+}
+h2{
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 1.533;
+	letter-spacing: 1px;
+}
+h2 strong{
+	font-weight: 400;
+	color: #7d968f;
+}
+h3{
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+h4{
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 1;
+}
+ul, li{
+	margin: 0 0 0 0px;
+	padding: 0 0 0 0px;
+	list-style: none;
+	display: block;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a img{
+	border: none;
+	display: block;
+}
+.Rectangle_534 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(71, 72, 72);
+  background-color: rgba(199, 205, 203, 0);
+  position: absolute;
+  left: 397px;
+  top: 487px;
+  width: 646px;
+  height: 50px;
+  z-index: 6;
+}
+
+input{
+	width: 96%;
+	height: 40px;
+	padding: 0 2%;
+	margin: 5px 0 20px 0px;
+	background: url(../images/bg_blank.png);
+	border: 1px solid rgb(71, 72, 72);
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+textarea{
+	width: 96%;
+	height: 125px;
+	padding: 0 2%;
+	margin: 5px 0 0 0px;
+	background: url(../images/bg_blank.png);
+	border: 1px solid rgb(71, 72, 72);
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+select{
+	width: 100%;
+	height: 40px;
+	padding: 0 2% 3px 2%;
+	margin: 5px 0 20px 0px;
+	background: url(../images/bg-dropdown.png) no-repeat right center;
+	border: 1px solid rgb(71, 72, 72);
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+label{
+	padding: 0px;
+	margin: 0px;
+	color: #000000;
+	font-weight: 400;
+	display: block;
+}
+input[type="submit"]{
+	width: 150px;
+	height: 45px;
+	margin-top: 20px;
+	padding: 0px;
+	background: url(../images/bg_blank.png);
+	background-color: #474848;
+	border: none;
+	border-radius: 0;
+	font-weight: 700;
+	color: #ffffff;
+	-webkit-appearance: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 1px solid #000000;
+}
+.clearBoth {
+	clear: both;
+}
+.colorGreen {
+	color: #7d968f;
+}
+
+/*	--------------------------------------------------
+	Preloader
+	-------------------------------------------------- */
+
+
+
+
+/*	--------------------------------------------------
+	Header & Navigation
+	-------------------------------------------------- */
+.logoHolder {
+	position: fixed;
+	top: 50px;
+	left: 60px;
+	z-index: 121;
+	width: 282px;
+	height: 30px;
+}
+.logoHolder a{
+	display: block;
+}
+.logoHolder img{
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+	display: block;
+}
+
+.btnBook {
+	position: fixed;
+	top: 50px;
+	right: 60px;
+	z-index: 121;
+}
+.btnBook a{
+	padding: 9px 20px;
+	font-size: 13px;
+	color: #6d6e6e;
+	display: block;
+	border: 1px solid #474848;
+	border-radius: 25px
+}
+#btnMenu {
+    position: fixed;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    z-index: 333;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#btnMenu .bar1, 
+#btnMenu .bar2 {
+    width: 2px;
+    height: 22px;
+    background-color: #6d6e6e;
+    margin-right: 3px;
+    transition: 0.5s;
+    display: inline-block;
+    transform-origin: 0 0;
+}
+.colorWhite .bar1, 
+.colorWhite .bar2, 
+.colorWhite .bar3 {
+    background-color: #ffffff;
+}
+.change .bar1 {
+	transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg) translate(0px, 0px);
+    transform: rotate(-45deg) translate(0px, 0px);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+}
+.change .bar2 {
+	transform-origin: 0 0;
+    -webkit-transform: rotate(45deg) translate(4px, -5px);
+    transform: rotate(45deg) translate(4px, -5px);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+}
+
+
+/*	--------------------------------------------------
+	Footer
+	-------------------------------------------------- */
+footer {
+	position: fixed;
+	z-index: 121;
+	bottom: 50px;
+	left: 60px;
+	right: 60px;
+}
+.socialHolder {
+	float: left;
+}
+.socialHolder li{
+	background: url(../images/border-lingual.png) no-repeat right center;
+	padding: 0 10px;
+	display: inline-block;
+}
+.socialHolder li:last-child{
+	background: none;
+}
+.socialHolder li a{
+	font-size: 13px;
+	color: #6d6e6e;
+	display: block;
+}
+
+
+
+/*	--------------------------------------------------
+	Owl Carousel
+	-------------------------------------------------- */
+.owl-theme .owl-controls{
+	position: absolute;
+	z-index: 101;
+	bottom: -90px;
+	right: -85px;
+	width: 200px;
+	text-align: right;
+}
+.owl-theme .owl-nav div{
+	width: 80px;
+	height: 40px;
+	z-index: 111;
+	display: block;
+	margin: 0 20px 0px 0px;
+	padding: 22px 0 0 0px;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	transition: all 0.2s ease-out;
+}
+.owl-theme .owl-nav .owl-prev{
+	background: url(../images/bg-prev.png) no-repeat right center;
+    float: left;
+    text-align: left;
+}
+.owl-theme .owl-nav .owl-prev:hover {
+	width: 90px;
+	margin-left: -10px;
+	transition: all 0.2s ease-out;
+}
+.owl-theme .owl-nav .owl-next{
+	background: url(../images/bg-next.png) no-repeat left center;
+    float: right;
+    margin: 0;
+}
+.owl-theme .owl-nav .owl-next:hover {
+	width: 90px;
+	margin-right: -10px;
+	transition: all 0.2s ease-out;
+}
+
+
+/*	--------------------------------------------------
+	Section Cover
+	-------------------------------------------------- */
+.secCover {
+	position: relative;
+	height: 80vh;
+	margin: 80px 150px 20px 150px;
+	overflow: hidden;
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+.secCover.active {
+	margin: 60px 0 20px 0px;
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+.secCover .imgHolder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.secCover .imgHolder img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: calc(100% + 300px);
+	height: auto;
+	display: block;
+	pointer-events: none;
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+.secCover.active .imgHolder img{
+	width: calc(100%);
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+.secCover .btnPlay {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 90px;
+}
+.secCover a{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+
+/*	--------------------------------------------------
+	Homepage Navigator
+	-------------------------------------------------- */
+.theNavigator {
+	position: fixed;
+	z-index: 99;
+	left: 155px;
+	right: 155px;
+	bottom: 130px;
+}
+.theNavigator .theLine {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	border-top: 1px solid rgba(255,255,255,0.3);
+}
+.theNavigator ul{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.theNavigator li{
+	position: relative;
+	width: 6px;
+	height: 6px;
+	background: #ffffff;
+	border-radius: 50%;
+}
+.theNavigator li a{
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	border-radius: 50%;
+	display: block;
+}
+.theNavigator li .maskHighlight {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 20px;
+	height: 20px;
+	background: rgba(255,255,255,0.4);
+	pointer-events: none;
+	border-radius: 50%;
+	transition: 0.2s;
+}
+.theNavigator li.active .maskHighlight{
+	background: rgba(255,255,255,0.4);
+	transition: 0.2s;
+}
+.theNavigator li .textInd {
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 11px;
+	text-align: center;
+	color: #ffffff;
+	pointer-events: none;
+	opacity: 1;
+	transition: 0.3s;
+}
+.theNavigator li.active .textInd {
+	opacity: 1;
+	transition: 0.3s;
+}
+
+
+/*	--------------------------------------------------
+	Pagination
+	-------------------------------------------------- */
+.pagination {
+	margin: 0 155px;
+	padding: 75px 0px;
+	border-top: 1px solid #d0d0d0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.pagination li{
+	background: url(../images/border-paginator.png) no-repeat right center;
+	padding-right: 30px;
+	margin-right: 30px;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.pagination li:last-child{
+	background: transparent;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+.pagination li a{
+	color: #474848;
+}
+
+
+/*	--------------------------------------------------
+	Home Page
+	-------------------------------------------------- */
+#secIndex {
+	width: 100%;
+	height: 100%;
+}
+#secIndex .logoHolder img{
+	filter: brightness(400%);
+}
+#secIndex .lingualHolder {
+	filter: brightness(400%);
+}
+#secIndex .btnBook {
+	filter: brightness(400%);
+}
+#secIndex #btnMenu .bar1, 
+#secIndex #btnMenu .bar2 {
+    background-color: #ffffff;
+}
+#secIndex footer {
+	filter: brightness(400%);
+}
+#secIndex .videoHolder {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #181816;
+	overflow: hidden;
+}
+#secIndex .videoHolder video,
+#secIndex .videoHolder iframe,
+#secIndex .videoHolder img{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 120%;
+	height: 120%;
+	opacity: 0.45;
+	pointer-events: none;
+}
+#secIndex section{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+#secIndex section h1{
+	margin-bottom: 20px;
+	font-size: 50px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	color: #ffffff;
+}
+#secIndex section h2{
+	width: 60%;
+	margin-bottom: 20px;
+	font-size: 50px;
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: 3px;
+	color: #ffffff;
+}
+#secIndex section h1 span{
+	color: transparent;
+	-webkit-text-stroke: 1px #ffffff;
+	text-stroke: 1px #ffffff;
+	display: block;
+}
+#secIndex section p{
+	font-size: 15px;
+	text-align: justify;
+	color: #ffffff;
+}
+#secIndex section .contentHolder{
+	position: absolute;
+	top: 48%;
+	left: 155px;
+	transform: translateY(-50%);
+	width: 50%;
+}
+#secIndex section .contentHolder a.btnCTA {
+	margin-top: 45px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: underline;
+	color: #ffffff;
+	display: block;
+}
+#secIndex section .contentHolder a.btnCTA02 {
+	margin-top: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: underline;
+	color: #ffffff;
+	display: block;
+}
+#secIndex section .contentHolder a.btnCTA img,
+#secIndex section .contentHolder a.btnCTA02 img{
+	display: inline-block;
+	height: 13px;
+	padding-left: 5px;
+}
+#secIndex section .bigText{
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translateY(-50%);
+	font-size: 20vw;
+	font-weight: 300;
+	line-height: 1;
+	color: transparent;
+	text-transform: uppercase;
+	-webkit-text-stroke: 1px #ffffff;
+	text-stroke: 1px #ffffff;
+	opacity: 0.3;
+	white-space: nowrap;
+}
+#secIndex section .imgWrapper {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: 0;
+	object-fit: cover;
+	overflow: hidden;
+}
+#secIndex section .imgWrapper img{
+	width: 100%;
+	object-fit: cover;
+}
+#secIndex .sec01 .contentHolder{
+	position: absolute;
+	top: 50%;
+	left: 155px;
+	width: 35%;
+}
+#secIndex .sec01 .space20 {
+	margin-top: 20px;
+	text-decoration: underline;
+}
+#secIndex .sec02 {
+	background-color: #0c0c0c;
+}
+#secIndex .sec03 {
+	background: #0c0c0c;
+}
+#secIndex .sec04 {
+	background: #0c0c0c;
+}
+#secIndex .sec05 .contentHolder{
+	position: absolute;
+	top: 55%;
+	left: 155px;
+	width: 35%;
+}
+/*	--------------------------------------------------
+	About Us Page
+	-------------------------------------------------- */
+#secAboutUs * { 
+	box-sizing: border-box; 
+}
+#secAboutUs {
+	width: 100%;
+	height: 100%;
+}
+#secAboutUs footer {
+	margin: 50px 70px 50px 70px;
+	position: static;
+}
+#secAboutUs h1{
+	margin-bottom: 40px;
+	width: 55%;
+}
+#secAboutUs h1 span{
+	margin-bottom: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+}
+#secAboutUs h4{
+	margin-bottom: 35px;
+}
+#secAboutUs h4 span{
+	margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+}
+#secAboutUs p{
+	margin-bottom: 25px;
+	text-align: justify;
+}
+#secAboutUs .secIntro {
+	padding: 18em 150px 0 150px;
+}
+#secAboutUs .secIntro p{
+	font-size: 20px;
+	line-height: 1.5;
+}
+#secAboutUs .secBanner {
+	height: 70vh;
+	padding: 0 150px 0 150px;
+	overflow: hidden;
+	margin-top: 100px;
+}
+#secAboutUs .secBanner img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+#secAboutUs .secDesc {
+	padding: 85px 0 65px 0px;
+	margin: 0 150px;
+}
+#secAboutUs .secTeam {
+	padding: 0 150px 0 150px;
+}
+#secAboutUs .secTitle {
+	margin-bottom: 30px;
+}
+#secAboutUs .secContent {
+	
+}
+#secAboutUs .secTeam {
+	margin: 6em 0 0 0px;
+}
+#secAboutUs .secListing li{
+	width: 70%;
+    margin-right: 35px;
+    counter-increment: gallery-cell;
+}
+#secAboutUs .secListing li{
+	display: block;
+    content: counter(gallery-cell);
+}
+#secAboutUs .secListing li .imgHolder {
+	width: 100%;
+	margin-bottom: 35px;
+}
+#secAboutUs .secListing li .imgHolder img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+
+
+/*	--------------------------------------------------
+	Program Details Page
+	-------------------------------------------------- */
+#secProgram {
+	width: 100%;
+	height: 100%;
+}
+#secProgram footer {
+	margin: 50px 70px 50px 70px;
+	position: static;
+}
+#secProgram .secCover {
+	margin-top: 100px;
+} 
+#secProgram h1{
+	margin-bottom: 40px;
+	width: 60%;
+}
+#secProgram h1 span{
+	margin-bottom: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+}
+#secProgram h3{
+	margin-bottom: 20px;
+}
+#secProgram h4{
+	margin-bottom: 15px;
+}
+#secProgram h4 span{
+	margin-top: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+}
+#secProgram p{
+	margin-bottom: 25px;
+	text-align: justify;
+}
+#secProgram li{
+	text-align: justify;
+}
+#secProgram .secIntro {
+	padding: 18em 150px 80px 150px;
+}
+#secProgram .secIntro p{
+	font-size: 20px;
+	line-height: 1.5;
+}
+#secProgram .secIntro02 {
+	padding: 50px 150px 50px 150px;
+}
+#secProgram .secIntro02 p{
+	font-size: 20px;
+	line-height: 1.5;
+}
+#secProgram .secBanner {
+	padding: 0 150px 0 150px;
+}
+#secProgram .secBanner img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+#secProgram .secDesc {
+	padding: 50px 0 60px 0px;
+	margin: 0 150px;
+}
+#secProgram .secDesc ul{
+	margin-bottom: 25px;
+}
+#secProgram .secDesc li{
+	list-style: disc outside none;
+	display: list-item;
+	margin-left: 20px;
+}
+#secProgram .secListing {
+	padding: 0 0 0 0px;
+	margin: 0 150px;
+}
+#secProgram .secListing ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+#secProgram .secListing li{
+	width: 32%;
+	margin: 0 2% 2% 0px;
+}
+#secProgram .secListing li:nth-child(3n){
+	margin-right: 0;
+}
+#secProgram .secListing li a{
+	display: block;
+}
+#secProgram .secListing li .imgHolder {
+	width: 100%;
+	margin-bottom: 35px;
+}
+#secProgram .secListing li .imgHolder img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+#secProgram .secListing02 {
+	padding: 0 0 0 0px;
+	margin: 0 150px;
+}
+#secProgram .secListing02 ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+#secProgram .secListing02 li{
+	width: 49%;
+	margin: 0 1% 2% 0px;
+}
+#secProgram .secListing02 li:nth-child(3n){
+	margin-right: 0;
+}
+#secProgram .secListing02 li a{
+	display: block;
+}
+#secProgram .secListing02 li .imgHolder {
+	width: 100%;
+	margin-bottom: 35px;
+}
+#secProgram .secListing02 li .imgHolder img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+#secProgram .secListing03 {
+	padding: 20px 0 80px 0px;
+	margin: 0 150px;
+}
+#secProgram .secListing03 h2{
+	margin-bottom: 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#secProgram .secListing03 h4{
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+#secProgram .secListing03 h3{
+	padding: 0 0 80px 0px;
+	margin: 0 150px;
+}
+#secProgram .secListing03 ul{
+}
+#secProgram .secListing03 li{
+	width: 48%;
+	margin-right: 2%;
+	padding-right: 2%;
+	display: block;
+}
+#secProgram .secListing03 li:last-child{
+	margin-right: 0px;
+	padding-right: 0px;
+	border-right: none;
+}
+#secProgram .secListing03 li .imgHolder {
+	width: 100%;
+	margin-bottom: 15px;
+}
+#secProgram .secListing03 li .imgHolder img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+
+
+/*	--------------------------------------------------
+	Media Details Page
+	-------------------------------------------------- */
+#secMedia {
+	width: 100%;
+	height: 100%;
+}
+#secMedia footer {
+	margin: 50px 70px 50px 70px;
+	position: static;
+}
+#secMedia h1{
+	margin: 0 auto 0 auto;
+	width: 60%;
+}
+#secMedia h1 span{
+	margin-bottom: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+}
+#secMedia h4{
+	margin-bottom: 15px;
+}
+#secMedia h4 span{
+	margin-top: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: block;
+}
+#secMedia p{
+	margin-bottom: 25px;
+}
+#secMedia .btnPlay {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 90px;
+}
+#secMedia .secBanner {
+	position: relative;
+	height: 100vh;
+	background-color: #1c1b1b;
+	overflow: hidden;
+	transition: 0.5s;
+	transition-delay: 0.1s;
+}
+#secMedia .secBanner img{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+#secMedia .secBanner a{
+	display: block;
+}
+#secMedia .secIntro {
+	padding: 80px 150px 0px 150px;
+	text-align: center;
+}
+#secMedia .secIntro p{
+	font-size: 20px;
+	line-height: 1.5;
+}
+#secMedia .secListing {
+	padding: 80px 150px 30px 150px;
+}
+#secMedia .secListing li{
+	position: relative;
+	margin-top: 100px;
+	margin-bottom: 30px;
+	opacity: 0;
+	transition: 0.75s;
+}
+#secMedia .secListing li.active{
+	position: relative;
+	margin-top: 0px;
+	opacity: 1;
+	transition: 1s;
+}
+#secMedia .secListing li img{
+	width: 100%;
+	height: auto;
+}
+#secMedia .secListing li a{
+	display: block;
+}
+
+
+
+/*	--------------------------------------------------
+	For Mobile Portrait
+	-------------------------------------------------- */
+@media screen and (min-width: 200px) and (max-width: 959px) {
+	h1{
+		font-size: 25px;
+	}
+	h2{
+		font-size: 20px;
+	}
+	h3{
+		font-size: 13px;
+	}
+	h4{
+		font-size: 20px;
+	}
+	
+	.logoHolder {
+		top: 28px;
+		left: 35px;
+		width: 200px;
+		height: 20px;
+	}
+	.lingualHolder {
+		position: fixed;
+		top: 28px;
+		right: 60px;
+		z-index: 121;
+		/*display: none;*/
+	}
+	.btnBook {
+		display: none;
+	}
+	#btnMenu {
+	    position: fixed;
+	    top: 36px;
+	    left: auto;
+	    right: 35px;
+	    transform: none;
+	}
+	#btnMenu .bar1, 
+	#btnMenu .bar2 {
+	    width: 22px;
+	    height: 2px;
+	    margin-right: 0px;
+	    margin-bottom: 7px;
+	    display: block;
+	}
+	.change .bar1 {
+		transform-origin: 0 0;
+	    -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+	    transform: rotate(-45deg) translate(-4px, 6px);
+	}
+	.change .bar2 {
+		transform-origin: 0 0;
+	    -webkit-transform: rotate(45deg) translate(-10px, -15px);
+	    transform: rotate(45deg) translate(-10px, -15px);
+	}
+
+	footer {
+		bottom: 35px;
+		left: 20px;
+		right: 35px;
+	}
+
+	
+
+	.secCover {
+		position: relative;
+		height: 450px;
+		margin: 80px 50px 20px 50px;
+	}
+	.secCover.active {
+		margin: 60px 50px 20px 50px;
+	}
+	.secCover .imgHolder {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	.secCover .imgHolder img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 100%;
+		height: 450px;
+		display: block;
+		pointer-events: none;
+		transition: 0.5s;
+		transition-delay: 0.1s;
+	}
+	.secCover.active .imgHolder img{
+		width: calc(100%);
+		transition: 0.5s;
+		transition-delay: 0.1s;
+	}
+	.secCover .btnPlay {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 90px;
+	}
+	.theNavigator {
+		left: 50px;
+		right: 50px;
+		bottom: 120px;
+		display: none;
+	}
+	
+	.pagination {
+		margin: 0 35px;
+		padding: 15px 0 35px 0px;
+	}
+	.pagination li{
+		background: transparent;
+		padding-right: 0px;
+		margin-right: 0px;
+	}
+	/*.pagination li:last-child{
+		display: none;
+	}*/
+	
+	#secIndex .videoHolder video,
+	#secIndex .videoHolder iframe,
+	#secIndex .videoHolder img{
+		width: auto;
+		height: 110%;
+	}
+	#secIndex section{
+	    position: fixed;
+	    z-index: 2;
+	    width: 100%;
+	    height: 100%;
+	}
+	#secIndex section h1{
+		font-size: 30px;
+	}
+	#secIndex section h2{
+		width: 60%;
+		font-size: 30px;
+	}
+	#secIndex section .contentHolder{
+		top: 55%;
+		left: 40px;
+		right: 40px;
+		width: 75%;
+	}
+	#secIndex section .contentHolder a.btnCTA {
+		margin-top: 45px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		text-decoration: underline;
+		color: #ffffff;
+		display: block;
+	}
+	#secIndex section .contentHolder a.btnCTA02 {
+		margin-top: 5px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		text-decoration: underline;
+		color: #ffffff;
+		display: block;
+	}
+	#secIndex section .contentHolder a.btnCTA img,
+	#secIndex section .contentHolder a.btnCTA02 img{
+		display: inline-block;
+		height: 13px;
+		padding-left: 5px;
+	}
+	#secIndex section .bigText{
+		font-size: 40vw;
+	}
+	#secIndex section .imgWrapper {
+		width: 100%;
+		height: 50%;
+		right: 0;
+		left: 0;
+	}
+	#secIndex .sec01 .contentHolder{
+		top: 50%;
+		left: 50px;
+		right: 50px;
+		width: auto;
+	}
+
+	#secHorizMenu h1{
+		margin-bottom: 10%;
+	}
+	#secHorizMenu h2.smallFont {
+		font-size: 18px;
+	}
+	#secHorizMenu h3{
+		display: none;
+	}
+	#secHorizMenu a.btnCTA {
+		margin-top: 25px;
+	}
+	#secHorizMenu .secContent {
+		position: fixed;
+		height: 100%;
+		display: flex;
+	}
+	#secHorizMenu .secContent .secIntro {
+		width: 270px;
+		padding: 120px 50px 100px 30px;
+	}
+	#secHorizMenu .secContent .secListing li{
+		width: 300px;
+		padding: 100px 30px 120px 30px;
+	}
+	#secHorizMenu .secContent .secListing li:hover{
+		padding-right: 30px;
+	}
+	#secHorizMenu .secContent .secListing li h2,
+	#secHorizMenu .secContent .secListing li p{
+		width: 300px;
+	}
+	#secHorizMenu .secContent .secListing .txtHolder {
+		position: absolute;
+		bottom: 0px;
+		margin: 0 30px 100px 0px;
+	}
+	#secHorizMenu .secContent .secListing .txtHolder h2{
+		padding: 10px 0px;
+	}
+	#secHorizMenu .secContent .secListing .imgHolder {
+		height: 200px;
+	}
+	#secHorizMenu .secContent .secListing .imgHolder img{
+		margin-bottom: 10px;
+	}
+	#secHorizMenu .secContent .secListing .btnCTA {
+		margin-top: 15px;
+	}
+
+	#secHorizMenu02 h2.smallFont {
+		font-size: 18px;
+	}
+	#secHorizMenu02 .secContent {
+		position: fixed;
+		height: 100%;
+		display: flex;
+	}
+	#secHorizMenu02 .secContent .secIntro {
+		width: 350px;
+		padding: 35vh 50px 0 30px;
+	}
+	#secHorizMenu02 .secContent .secListing li{
+		width: 320px;
+		height: 66%;
+		margin: 0 10px 0 10px;
+	}
+	#secHorizMenu02 .secContent .secListing li:last-child{
+		margin: 0 70px 0 10px;
+	}
+	#secHorizMenu02 .secContent .secListing .imgHolder img{
+		width: auto;
+		height: 100%;
+	}
+	#secHorizMenu02 .secContent .secListing .txtHolder {
+		left: 50px;
+		bottom: 50px;
+		width: 200px;
+	}
+
+	#secHorizMenu03 h1{
+		margin-bottom: 10%;
+	}
+	#secHorizMenu03 h2.smallFont {
+		font-size: 17px;
+	}
+	#secHorizMenu03 .secContent {
+		position: fixed;
+		height: 100%;
+	}
+	#secHorizMenu03 .secContent .secIntro {
+		width: 270px;
+		padding: 20vh 50px 0 30px;
+	}
+	#secHorizMenu03 .secContent .secListing li{
+		width: 300px;
+		padding: 120px 30px 100px 30px;
+	}
+	#secHorizMenu03 .secContent .secListing li:hover{
+		width: 300px;
+	}
+	#secHorizMenu03 .secContent .secListing li h2{
+		width: 300px;
+	}
+	#secHorizMenu03 .secContent .secListing li p{
+		width: 300px;
+	}
+	#secHorizMenu03 .secContent .secListing .imgHolder {
+		position: relative;
+		bottom: auto;
+		margin: 30px 0 100px 0px;
+	}
+
+	#secHorizMenu04 .flickity-page-dots {
+		bottom: 70px;
+	}
+	#secHorizMenu04 section h1{
+		margin-bottom: 20px;
+		font-size: 25px;
+	}
+	#secHorizMenu04 section h1 span{
+		margin-bottom: 3px;
+	}
+	#secHorizMenu04 section h2{
+		width: auto;
+		font-size: 20px;
+	}
+	#secHorizMenu04 section .contentHolder {
+		top: 50%;
+		left: 40px;
+		right: 40px;
+		width: auto;
+	}
+	#secHorizMenu04 section .imgWrapper {
+		width: 100%;
+		height: 50%;
+		right: auto;
+		left: 0;
+		top: 0;
+	}
+	#secHorizMenu04 section .contentHolder a.btnCTA {
+		margin-top: 25px;
+	}
+
+	#secAboutUs footer {
+		margin: 35px 35px 35px 35px;
+	}
+	#secAboutUs h1{
+		width: auto;
+	}
+	#secAboutUs .secIntro {
+		padding: 200px 35px 0 35px;
+	}
+	#secAboutUs .secIntro p{
+		font-size: 16px;
+	}
+	#secAboutUs .secBanner {
+		height: 350px;
+	}
+	#secAboutUs .secDesc {
+		padding: 65px 0 50px 0px;
+		margin: 0 35px;
+	}
+	#secAboutUs .secTeam {
+		padding: 0px 35px 0 35px;
+	}
+	#secAboutUs .secTitle {
+		width: auto;
+		margin-bottom: 30px;
+		float: none;
+	}
+	#secAboutUs .secContent {
+		width: auto;
+		float: none;
+	}
+	#secAboutUs .secListing {
+		width: auto;
+		float: none;
+		display: block;
+	}
+	#secAboutUs .secListing li{
+		width: 100%;
+		margin-right: 35px;
+	}
+	#secAboutUs .secListing li .imgHolder {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+
+	#secProgram footer {
+		margin: 35px 35px 35px 35px;
+	}
+	#secProgram h1{
+		width: auto;
+	}
+
+	#secProgram .secIntro {
+		padding: 200px 35px 0px 35px;
+	}
+	#secProgram .secIntro02 {
+		padding: 50px 35px 50px 35px;
+	}
+	#secProgram .secIntro p,
+	#secProgram .secIntro02 p,
+	#secProgram .secDesc p{
+		font-size: 16px;
+	}
+	#secProgram .secBanner {
+		padding: 0 35px 0 35px;
+	}
+	#secProgram .secDesc {
+		padding: 50px 0 30px 0px;
+		margin: 0 35px;
+	}
+	#secProgram .secListing {
+		margin: 0 35px;
+	}
+	#secProgram .secListing ul{
+		display: block;
+	}
+	#secProgram .secListing li{
+		width: auto;
+		margin: 0 0 10% 0px;
+	}
+	#secProgram .secListing02 {
+		margin: 0 35px;
+	}
+	#secProgram .secListing02 ul{
+		display: block;
+	}
+	#secProgram .secListing02 li{
+		width: auto;
+		margin: 0 0 10% 0px;
+	}
+	#secProgram .secListing02 li .imgHolder {
+		margin-bottom: 25px;
+	}
+	#secProgram .secListing03 {
+		width: auto;
+		margin: 0 35px;
+		padding: 20px 0 50px 0px;
+	}
+	#secProgram .secListing03 li{
+		width: 100%;
+		margin-right: 35px;
+	}
+	#secProgram .secListing03 li .imgHolder {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+
+	#secMedia footer {
+		margin: 35px 35px 35px 35px;
+	}
+	#secMedia h1{
+		width: auto;
+	}
+	#secMedia .secBanner {
+		height: 450px;
+	}
+	#secMedia .secBanner.active {
+		height: 450px;
+	}
+	#secMedia .secBanner img{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: auto;
+		height: 470px;
+	}
+	#secMedia .secBanner .btnPlay {
+		z-index: 1;
+		width: 70px;
+	}
+	#secMedia .secBanner .btnPlay img{
+		width: 70px;
+		height: 70px;
+	}
+	#secMedia .secIntro {
+		padding: 100px 35px 0px 35px;
+	}
+	#secMedia .secListing {
+		padding: 30px 35px 30px 35px;
+	}
+
+	#secLoginRegister {
+		padding-top: 200px;
+	}
+	#secLoginRegister footer {
+		margin: 35px 35px 35px 35px;
+	}
+	#secLoginRegister h1{
+		margin: 0 auto 30px auto;
+	}
+	#secLoginRegister h1 span{
+		margin-bottom: 5px;
+	}
+	#secLoginRegister p{
+		margin-bottom: 20px;
+	}
+	#secLoginRegister .secIntro {
+		width: 80%;
+	}
+	#secLoginRegister .secContent {
+		width: 80%;
+	}
+}
+
+
+/*	--------------------------------------------------
+	For Mobile Landscape
+	-------------------------------------------------- */
+@media screen and (min-width: 560px) and (max-width: 749px) {
+	h1{
+		font-size: 18px;
+	}
+	p {
+		font-size: 13px;
+	}
+	#secIndex section p{
+		font-size: 13px;
+	}
+	#secIndex section .imgWrapper {
+		width: 50%;
+		height: 100%;
+		right: 0;
+		left: auto;
+	}
+	#secIndex section h2{
+		width: 80%;
+		margin-bottom: 10px;
+	}
+	#secIndex section .contentHolder{
+		left: 50px;
+		width: 75%;
+	}
+	#secIndex section .contentHolder a.btnCTA {
+		margin-top: 15px;
+		font-size: 13px;
+	}
+	#secIndex section .contentHolder a.btnCTA02 {
+		font-size: 13px;
+	}
+	#secHorizMenu h1 {
+		font-size: 18px;
+	}
+	#secHorizMenu h2.smallFont {
+		font-size: 15px;
+	}
+	#secHorizMenu p{
+		font-size: 13px;
+	}
+	#secHorizMenu .secContent .secIntro {
+		width: 450px;
+		padding: 90px 50px 100px 50px;
+	}
+	#secHorizMenu .secContent .secIntro p{
+		display: none;
+	}
+	#secHorizMenu .secContent .secListing li{
+		padding: 70px 30px 50px 30px;
+	}
+	#secHorizMenu .secContent .secListing .txtHolder {
+		height: 120px;
+		left: 30px;
+		right: 30px;
+		bottom: 70px;
+		margin: 0 0 10px 0px;
+		overflow: hidden;
+	}
+	#secHorizMenu .secContent .secListing .txtHolder h2,
+	#secHorizMenu .secContent .secListing .txtHolder p{
+		padding: 0px;
+		display: none;
+	}
+	#secHorizMenu .secContent .secListing .imgHolder {
+		height: 200px;
+	}
+	#secHorizMenu .secContent .secListing .imgHolder img{
+		margin-bottom: 0px;
+	}
+
+	#secHorizMenu02 h1 {
+		font-size: 20px;
+	}
+	#secHorizMenu02 .secContent .secIntro {
+		width: 450px;
+		padding: 90px 50px 100px 50px;
+	}
+	#secHorizMenu02 .secContent .secListing li{
+		width: 260px;
+		height: 55%;
+		margin: 20px 10px 0 10px;
+	}
+	#secHorizMenu02 .secContent .secListing li:last-child{
+		margin: 20px 70px 0 10px;
+	}
+	#secHorizMenu02 .secContent .secListing .txtHolder {
+		left: 20px;
+		bottom: 10px;
+		width: 200px;
+	}
+
+	#secHorizMenu03 h1 {
+		font-size: 18px;
+	}
+	#secHorizMenu03 .secContent .secIntro {
+		width: 450px;
+		padding: 120px 50px 100px 50px;
+	}
+	#secHorizMenu03 .secContent .secIntro p{
+		display: none;
+	}
+	#secHorizMenu03 .secContent .secListing li{
+		width: 300px;
+		padding: 80px 30px 0 30px;
+	}
+	#secHorizMenu03 .secContent .secListing li:hover{
+		width: 300px;
+	}
+	#secHorizMenu03 .secContent .secListing li h2{
+		width: 300px;
+		font-size: 16px;
+	}
+	#secHorizMenu03 .secContent .secListing li p{
+		width: 300px;
+		display: none;
+	}
+	#secHorizMenu03 .secContent .secListing li a{
+		display: block;
+	}
+	#secHorizMenu03 .secContent .secListing .btnCTA {
+		display: none;
+	}
+	#secHorizMenu03 .secContent .secListing .imgHolder {
+		position: absolute;
+		height: 120px;
+		left: 30px;
+		right: 30px;
+		bottom: 120px;
+		margin: 0 0 0 0px;
+	}
+	#secHorizMenu03 .secContent .secListing .imgHolder img{
+		margin-bottom: 5px;
+	}
+	#secHorizMenu04 section h1 span{
+		display: none;
+	}
+	#secHorizMenu04 section p{
+		font-size: 13px;
+	}
+
+	#secAboutUs .secIntro p{
+		font-size: 13px;
+	}
+
+	#secProgram .secIntro p{
+		font-size: 13px;
+	}
+	#secProgram li {
+		font-size: 13px;
+	}
+
+	#secMedia .secIntro p{
+		font-size: 13px;
+	}
+
+	#secLoginRegister .secIntro p{
+		font-size: 13px;
+	}
+}
+
+
+/*	--------------------------------------------------
+	For Large Screen
+	-------------------------------------------------- */
+@media screen and (min-width: 1600px) and (max-width: 5000px) {
+	.secCover {
+		height: 50vh;
+	}
+
+	#secHorizMenu .secContent .secListing li{
+		width: 450px;
+		padding: 150px 30px 150px 30px;
+	}
+	#secHorizMenu .secContent .secListing li h2,
+	#secHorizMenu .secContent .secListing li p{
+		width: 450px;
+	}
+	#secHorizMenu03 .secContent .secIntro {
+		width: 450px;
+		padding: 150px 90px 100px 150px;
+	}
+	#secHorizMenu03 .secContent .secListing li{
+		width: 450px;
+		padding: 150px 30px 150px 30px;
+	}
+	#secHorizMenu03 .secContent .secListing li:hover{
+		width: 500px;
+	}
+	#secHorizMenu03 .secContent .secListing li h2{
+		width: 450px;
+	}
+	#secHorizMenu03 .secContent .secListing li p{
+		width: 450px;
+	}
+}
+
+
+/*	--------------------------------------------------
+	For Mobile Portrait (Small)
+	-------------------------------------------------- */
+@media screen and (min-width: 200px) and (max-width: 450px) {
+	#secIndex section h2{
+		width: 100%;
+	}
+	#secHorizMenu .secContent .secListing .imgHolder {
+		height: 135px;
+	}
+	#secHorizMenu03 .secContent .secListing li{
+		padding: 80px 30px 100px 30px;
+	}
+	#secHorizMenu03 .secContent .secIntro {
+		padding: 100px 50px 100px 35px;
+	}
+}
